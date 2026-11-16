@@ -149,22 +149,5 @@
     });
     d.querySelectorAll('[data-cookies-otworz]').forEach(function(x){x.addEventListener('click',otworz);});
   }
-  /* galeria wzorów: powiększenie (dialog), strzałki, klawisze, przesunięcie palcem, klik w tło zamyka */
-  var lb=d.getElementById('lb'), wz=[].slice.call(d.querySelectorAll('.wzor')), lbi=0;
-  if(lb&&wz.length&&lb.showModal){
-    var lbImg=lb.querySelector('img'), lbOp=lb.querySelector('figcaption');
-    var pokaz=function(i){lbi=(i+wz.length)%wz.length;var w=wz[lbi];lbImg.src=w.getAttribute('data-duze');lbImg.alt=w.querySelector('img').alt;lbOp.textContent=w.getAttribute('data-opis');};
-    wz.forEach(function(w,i){w.addEventListener('click',function(){pokaz(i);lb.showModal();});});
-    lb.addEventListener('click',function(e){
-      var b=e.target.closest('[data-lb]');
-      if(b){if(b.getAttribute('data-lb')==='x')lb.close();else pokaz(lbi+Number(b.getAttribute('data-lb')));return;}
-      if(e.target===lb||e.target.tagName==='FIGURE')lb.close();
-    });
-    lb.addEventListener('keydown',function(e){if(e.key==='ArrowRight')pokaz(lbi+1);else if(e.key==='ArrowLeft')pokaz(lbi-1);});
-    var tx=null;
-    lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-    lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>50)pokaz(lbi+(dx<0?1:-1));},{passive:true});
-    lb.addEventListener('close',function(){wz[lbi].focus();});
-  }
   mapy();
 })();
