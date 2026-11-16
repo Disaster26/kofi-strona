@@ -438,6 +438,24 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
 .lb img{max-height:calc(100dvh - 160px)}
 }
 @media (prefers-reduced-motion:reduce){.wzor img{transition:none}}
+
+/* zespół (16.11): karty ze zdjęciem, imię i nazwisko, e-mail */
+.zespol{background:var(--szary)}
+.zespol-siatka{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
+.osoba{background:#fff;position:relative;display:flex;flex-direction:column;min-width:0}
+.osoba::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:10px;border-top:4px solid var(--nieb);border-bottom:2px solid var(--nieb);pointer-events:none}
+.osoba img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#F3F4F5}
+.osoba-tr{padding:16px 16px 18px}
+.osoba h3{font:700 17px/1.25 var(--h);color:var(--graf);margin:0 0 6px}
+.osoba a{font-size:14.5px;color:var(--nieb);text-decoration:none;overflow-wrap:anywhere}
+.osoba a:hover{text-decoration:underline}
+@media (max-width:1060px){.zespol-siatka{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){
+.zespol-siatka{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.osoba-tr{padding:12px 12px 14px}
+.osoba h3{font-size:16px}
+.osoba a{font-size:13.5px}
+}
 </style>
 <meta name="description" content="KOFI z Myśliborza od 2003 r. obsługuje w imieniu polskich producentów mebli hurtowych klientów z Niemiec: zamówienia, faktury, dokumenty, reklamacje.">
 <link rel="canonical" href="https://disaster26.github.io/kofi-strona/">
@@ -476,11 +494,12 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
             <a href="#uslugi">Zakres usług</a>
             <a href="#schemat">Jak działamy</a>
             <a href="#firma">O firmie</a>
+            <a href="#zespol">Zespół</a>
             <a href="#de" lang="de">Für Kunden in DE</a>
             <a href="#kontakt">Kontakt</a>
             <div class="menu-kontakt">
         <a href="tel:+48509773174"><svg aria-hidden="true"><use href="#tel"/></svg>+48 509 773 174</a>
-        <a href="mailto:k%6f%66%69&#064;&#107;&#111;%66i%2ep%6c"><svg aria-hidden="true"><use href="#mail"/></svg>k&#111;f&#105;&#64;&#107;&#111;fi&#46;p&#108;</a>      </div>
+        <a href="mailto:k%6f%66%69&#064;&#107;&#111;fi.pl"><svg aria-hidden="true"><use href="#mail"/></svg>ko&#102;i&#64;ko&#102;&#105;&#46;p&#108;</a>      </div>
     </nav>
     <div class="nag-akcje">
       <div class="jezyk" role="group" aria-label="Język"><a href="#top" class="jez-akt" aria-current="true">PL</a><a href="#de" lang="de" hreflang="de">DE</a></div>
@@ -686,6 +705,52 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
     </div>
   </section>
 
+    <section class="sek zespol" id="zespol" aria-labelledby="h-zespol">
+    <div class="wrap">
+      <div class="sek-glowa">
+        <h2 id="h-zespol">Nasz zespół</h2>
+        <p>Z&nbsp;nami rozmawiają Państwo bezpośrednio. Do każdej osoby można napisać na jej adres e-mail.</p>      </div>
+      <ul class="zespol-siatka">
+                <li class="osoba">
+          <img src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/mariusz-kisly-450.webp" srcset="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/mariusz-kisly-300.webp 300w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/mariusz-kisly-450.webp 450w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/mariusz-kisly-600.webp 600w" sizes="(max-width:860px) 46vw, (max-width:1060px) 30vw, 200px" width="600" height="750" loading="lazy" decoding="async" alt="Mariusz Kisły">
+          <div class="osoba-tr">
+            <h3>Mariusz Kisły</h3>
+            <a href="mailto:%6dk%69&#115;%6c&#121;%40&#107;%6f&#102;&#105;&#046;%70l">&#109;&#107;is&#108;&#121;&#64;k&#111;&#102;&#105;.&#112;l</a>          </div>
+        </li>
+                <li class="osoba">
+          <img src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/piotr-kisly-450.webp" srcset="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/piotr-kisly-300.webp 300w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/piotr-kisly-450.webp 450w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/piotr-kisly-600.webp 600w" sizes="(max-width:860px) 46vw, (max-width:1060px) 30vw, 200px" width="600" height="750" loading="lazy" decoding="async" alt="Piotr Kisły">
+          <div class="osoba-tr">
+            <h3>Piotr Kisły</h3>
+            <a href="mailto:p%6b&#105;%73ly%40k&#111;f&#105;&#046;&#112;l">&#112;&#107;i&#115;l&#121;&#64;k&#111;fi.&#112;l</a>          </div>
+        </li>
+                <li class="osoba">
+          <img src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-450.webp" srcset="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-300.webp 300w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-450.webp 450w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-600.webp 600w" sizes="(max-width:860px) 46vw, (max-width:1060px) 30vw, 200px" width="600" height="750" loading="lazy" decoding="async" alt="Kamil Kisły">
+          <div class="osoba-tr">
+            <h3>Kamil Kisły</h3>
+            <a href="mailto:k%6bi&#115;&#108;y&#064;%6bo&#102;i%2e%70&#108;">k&#107;isly&#64;&#107;&#111;&#102;&#105;&#46;pl</a>          </div>
+        </li>
+                <li class="osoba">
+          <img src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-jr-450.webp" srcset="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-jr-300.webp 300w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-jr-450.webp 450w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/kamil-kisly-jr-600.webp 600w" sizes="(max-width:860px) 46vw, (max-width:1060px) 30vw, 200px" width="600" height="750" loading="lazy" decoding="async" alt="Kamil Kisły Jr.">
+          <div class="osoba-tr">
+            <h3>Kamil Kisły Jr.</h3>
+            <a href="mailto:%6b&#106;rk&#105;s&#108;%79&#064;%6b%6f%66%69&#046;p%6c">&#107;&#106;&#114;&#107;isl&#121;&#64;&#107;&#111;f&#105;&#46;pl</a>          </div>
+        </li>
+                <li class="osoba">
+          <img src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/marek-wittke-450.webp" srcset="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/marek-wittke-300.webp 300w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/marek-wittke-450.webp 450w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/marek-wittke-600.webp 600w" sizes="(max-width:860px) 46vw, (max-width:1060px) 30vw, 200px" width="600" height="750" loading="lazy" decoding="async" alt="Marek Wittke">
+          <div class="osoba-tr">
+            <h3>Marek Wittke</h3>
+            <a href="mailto:%6d&#119;&#105;&#116;%74%6b%65&#064;&#107;&#111;&#102;i.%70l">mw&#105;&#116;&#116;&#107;&#101;&#64;&#107;&#111;f&#105;.p&#108;</a>          </div>
+        </li>
+                <li class="osoba">
+          <img src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/judyta-podskalna-450.webp" srcset="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/judyta-podskalna-300.webp 300w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/judyta-podskalna-450.webp 450w, https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/img/zespol/judyta-podskalna-600.webp 600w" sizes="(max-width:860px) 46vw, (max-width:1060px) 30vw, 200px" width="600" height="750" loading="lazy" decoding="async" alt="Judyta Podskalna">
+          <div class="osoba-tr">
+            <h3>Judyta Podskalna</h3>
+            <a href="mailto:%6a&#112;%6fdsk%61&#108;%6e%61&#064;%6b&#111;f&#105;%2ep&#108;">&#106;p&#111;d&#115;&#107;a&#108;&#110;a&#64;kof&#105;&#46;pl</a>          </div>
+        </li>
+              </ul>
+    </div>
+  </section>
+  
   <section class="sek de" id="de" lang="de" aria-labelledby="h-de">
     <div class="wrap de-siatka">
       <div>
@@ -693,7 +758,7 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
         <p>KOFI betreut Möbel-Großhändler in Deutschland im Namen mehrerer polnischer Hersteller. Sie erhalten die Angebote der einzelnen Hersteller, entscheiden selbst, bei wem Sie bestellen, und erfahren von uns die möglichen Liefertermine.</p><p>Auftragsbestätigungen, Rechnungen und Versanddokumente bekommen Sie von jedem Hersteller im gleichen Format, und Ihre Ansprechpartner sprechen Deutsch.</p>                <ul class="lista de-lista"><li>Ansprechpartner auf Deutsch für Angebote, Bestellungen und Reklamationen</li><li>Einheitliche Dokumente von allen Herstellern</li><li>Lieferung direkt vom Hersteller zu Ihnen</li></ul>
               </div>
       <div class="de-kontakt">
-        <p><span>Bestellungen</span><a href="mailto:%6f&#114;%64er%73&#064;%6b&#111;f&#105;%2epl">o&#114;&#100;ers&#64;kof&#105;.&#112;l</a></p>        <p><span>Informationen</span><a href="mailto:&#107;of&#105;&#064;k&#111;&#102;i.&#112;&#108;">&#107;&#111;f&#105;&#64;&#107;of&#105;&#46;&#112;l</a></p>        <p><span>Telefon</span><a href="tel:+48957470423">+48 95 747 04 23</a></p>      </div>
+        <p><span>Bestellungen</span><a href="mailto:&#111;&#114;&#100;e&#114;&#115;&#064;k&#111;fi&#046;pl">o&#114;&#100;&#101;rs&#64;&#107;o&#102;&#105;.pl</a></p>        <p><span>Informationen</span><a href="mailto:k%6f&#102;i&#064;%6b%6f%66&#105;&#046;p&#108;">kofi&#64;&#107;o&#102;&#105;.pl</a></p>        <p><span>Telefon</span><a href="tel:+48957470423">+48 95 747 04 23</a></p>      </div>
     </div>
   </section>
 
@@ -705,7 +770,7 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
           <b>&quot;KISŁY KOFI&quot; Sp. k.<br>Mariusz Kisły</b>
           ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz        </address>
         <ul class="kontakt-lista">
-          <li><span>Telefon kom.</span><a href="tel:+48509773174">+48 509 773 174</a></li>          <li><span>Telefon</span><a href="tel:+48957470423">+48 95 747 04 23</a></li>          <li><span>Faks</span>+48 95 747 04 24</li>          <li><span>Mariusz Kisły</span><a href="mailto:mkisly&#064;kof%69%2e&#112;l">&#109;ki&#115;&#108;y&#64;k&#111;fi.p&#108;</a></li>          <li><span>Zamówienia</span><a href="mailto:%6f%72%64e%72%73&#064;%6b&#111;f&#105;%2e%70&#108;">&#111;r&#100;e&#114;s&#64;&#107;o&#102;&#105;&#46;&#112;l</a></li>          <li><span>Informacje</span><a href="mailto:&#107;o&#102;%69&#064;&#107;&#111;&#102;%69&#046;%70l">&#107;of&#105;&#64;ko&#102;i.pl</a></li>        </ul>
+          <li><span>Telefon kom.</span><a href="tel:+48509773174">+48 509 773 174</a></li>          <li><span>Telefon</span><a href="tel:+48957470423">+48 95 747 04 23</a></li>          <li><span>Faks</span>+48 95 747 04 24</li>          <li><span>Mariusz Kisły</span><a href="mailto:m%6b%69sly%40%6bof%69.%70&#108;">m&#107;&#105;sly&#64;&#107;o&#102;&#105;&#46;&#112;l</a></li>          <li><span>Zamówienia</span><a href="mailto:&#111;%72%64e&#114;s&#064;k%6ff&#105;%2epl">o&#114;d&#101;r&#115;&#64;kofi.pl</a></li>          <li><span>Informacje</span><a href="mailto:%6bo%66%69%40&#107;%6ff%69.%70l">&#107;ofi&#64;kof&#105;&#46;&#112;l</a></li>        </ul>
         <p class="kontakt-rej">&quot;KISŁY KOFI&quot; Spółka Komandytowa<br>KRS 0001092831 &middot; NIP 597-175-96-70 &middot; REGON 528044141</p>
       </div>
       <form class="form" id="form" method="post" action="#" data-test="Wersja testowa: formularz jeszcze nie wysyła wiadomości. Po uruchomieniu strony na kofi.pl zapytania będą trafiać na skrzynkę firmy, a pytający dostanie potwierdzenie." novalidate>
@@ -744,7 +809,7 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
     </nav>
     <div class="stopka-kontakt">
       <a href="tel:+48509773174">+48 509 773 174</a>
-      <a href="tel:+48957470423">+48 95 747 04 23</a>      <a href="mailto:k%6f%66i%40ko%66&#105;%2ep%6c">&#107;of&#105;&#64;&#107;ofi&#46;&#112;l</a>      <a href="mailto:o&#114;de&#114;&#115;&#064;%6b%6f&#102;i%2epl">or&#100;er&#115;&#64;k&#111;f&#105;.p&#108;</a>      <span>ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz</span>
+      <a href="tel:+48957470423">+48 95 747 04 23</a>      <a href="mailto:&#107;&#111;%66%69&#064;&#107;%6f%66i%2ep%6c">k&#111;fi&#64;&#107;&#111;f&#105;.&#112;l</a>      <a href="mailto:%6f&#114;d%65r%73&#064;%6b%6ff&#105;&#046;&#112;&#108;">o&#114;d&#101;rs&#64;&#107;&#111;&#102;&#105;.p&#108;</a>      <span>ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz</span>
     </div>
   </div>
   <div class="wrap stopka-dol">

@@ -436,6 +436,24 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
 .lb img{max-height:calc(100dvh - 160px)}
 }
 @media (prefers-reduced-motion:reduce){.wzor img{transition:none}}
+
+/* zespół (16.11): karty ze zdjęciem, imię i nazwisko, e-mail */
+.zespol{background:var(--szary)}
+.zespol-siatka{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
+.osoba{background:#fff;position:relative;display:flex;flex-direction:column;min-width:0}
+.osoba::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:10px;border-top:4px solid var(--nieb);border-bottom:2px solid var(--nieb);pointer-events:none}
+.osoba img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#F3F4F5}
+.osoba-tr{padding:16px 16px 18px}
+.osoba h3{font:700 17px/1.25 var(--h);color:var(--graf);margin:0 0 6px}
+.osoba a{font-size:14.5px;color:var(--nieb);text-decoration:none;overflow-wrap:anywhere}
+.osoba a:hover{text-decoration:underline}
+@media (max-width:1060px){.zespol-siatka{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){
+.zespol-siatka{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.osoba-tr{padding:12px 12px 14px}
+.osoba h3{font-size:16px}
+.osoba a{font-size:13.5px}
+}
 </style>
 <meta name="description" content="Ta polityka wyjaśnia, jakie dane przetwarzamy w związku z korzystaniem ze strony kofi.pl, w jakim celu i jakie prawa Państwu przysługują. Obowiązuje od lis...">
 <link rel="canonical" href="https://disaster26.github.io/kofi-strona/polityka-prywatnosci/">
@@ -496,11 +514,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
             <a href="https://disaster26.github.io/kofi-strona/#uslugi">Zakres usług</a>
             <a href="https://disaster26.github.io/kofi-strona/#schemat">Jak działamy</a>
             <a href="https://disaster26.github.io/kofi-strona/#firma">O firmie</a>
+            <a href="https://disaster26.github.io/kofi-strona/#zespol">Zespół</a>
             <a href="https://disaster26.github.io/kofi-strona/#de" lang="de">Für Kunden in DE</a>
             <a href="https://disaster26.github.io/kofi-strona/#kontakt">Kontakt</a>
             <div class="menu-kontakt">
         <a href="tel:+48509773174"><svg aria-hidden="true"><use href="#tel"/></svg>+48 509 773 174</a>
-        <a href="mailto:ko&#102;%69%40%6bo&#102;&#105;&#046;%70&#108;"><svg aria-hidden="true"><use href="#mail"/></svg>ko&#102;&#105;&#64;k&#111;&#102;&#105;.&#112;l</a>      </div>
+        <a href="mailto:%6bo%66%69&#064;k&#111;%66&#105;%2ep&#108;"><svg aria-hidden="true"><use href="#mail"/></svg>&#107;ofi&#64;&#107;&#111;&#102;i.&#112;l</a>      </div>
     </nav>
     <div class="nag-akcje">
       <div class="jezyk" role="group" aria-label="Język"><a href="https://disaster26.github.io/kofi-strona/" class="jez-akt" aria-current="true">PL</a><a href="https://disaster26.github.io/kofi-strona/#de" lang="de" hreflang="de">DE</a></div>
@@ -526,7 +545,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">Administratorem danych jest "KISŁY KOFI" Spółka Komandytowa z siedzibą w Myśliborzu, ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz, wpisana do rejestru przedsiębiorców KRS pod numerem 0001092831, NIP 597-175-96-70, REGON 528044141. Kontakt w sprawach danych: e-mail <a href="mailto:&#107;&#111;&#102;%69&#064;&#107;of%69.p&#108;">&#107;&#111;f&#105;&#64;&#107;&#111;fi&#46;pl</a>, telefon <a href="tel:+48509773174">+48 509 773 174</a> albo listownie na adres siedziby.</p>
+<p class="wp-block-paragraph">Administratorem danych jest "KISŁY KOFI" Spółka Komandytowa z siedzibą w Myśliborzu, ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz, wpisana do rejestru przedsiębiorców KRS pod numerem 0001092831, NIP 597-175-96-70, REGON 528044141. Kontakt w sprawach danych: e-mail <a href="mailto:k%6f%66&#105;&#064;%6b&#111;fi.%70%6c">kofi&#64;&#107;of&#105;&#46;p&#108;</a>, telefon <a href="tel:+48509773174">+48 509 773 174</a> albo listownie na adres siedziby.</p>
 
 
 
@@ -609,7 +628,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
     </nav>
     <div class="stopka-kontakt">
       <a href="tel:+48509773174">+48 509 773 174</a>
-      <a href="tel:+48957470423">+48 95 747 04 23</a>      <a href="mailto:k&#111;&#102;&#105;&#064;%6bo%66i.p%6c">&#107;&#111;f&#105;&#64;&#107;&#111;&#102;&#105;&#46;&#112;&#108;</a>      <a href="mailto:ord%65&#114;s%40k&#111;f%69&#046;%70l">&#111;&#114;&#100;&#101;rs&#64;ko&#102;&#105;.&#112;&#108;</a>      <span>ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz</span>
+      <a href="tel:+48957470423">+48 95 747 04 23</a>      <a href="mailto:k%6f%66%69&#064;k&#111;fi.p&#108;">&#107;o&#102;&#105;&#64;&#107;ofi&#46;&#112;l</a>      <a href="mailto:%6f%72d&#101;&#114;&#115;%40&#107;%6f&#102;i&#046;&#112;&#108;">&#111;&#114;&#100;&#101;&#114;&#115;&#64;&#107;&#111;&#102;i&#46;&#112;&#108;</a>      <span>ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz</span>
     </div>
   </div>
   <div class="wrap stopka-dol">
