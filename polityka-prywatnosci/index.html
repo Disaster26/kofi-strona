@@ -407,6 +407,35 @@ address b{display:block;font:700 18px/1.35 var(--h);color:var(--graf);margin-bot
   .tresc table{min-width:560px}
   .stopka-linki{gap:14px}
 }
+
+/* galeria: ostatnie wzory (16.11) */
+.wzory-siatka{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.wzory-siatka figure{margin:0}
+.wzor{display:block;width:100%;padding:0;border:0;background:var(--szary);cursor:zoom-in;position:relative;overflow:hidden}
+.wzor::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:10px;border-top:4px solid var(--nieb);border-bottom:2px solid var(--nieb);pointer-events:none}
+.wzor img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.wzor:hover img{transform:scale(1.03)}
+.wzor:focus-visible{outline:3px solid var(--nieb);outline-offset:3px}
+.wzory-siatka figcaption{margin-top:12px;font:700 17px/1.3 var(--h);color:var(--graf)}
+.lb{border:0;padding:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;background:rgba(14,18,23,.94);color:#fff}
+.lb[open]{display:flex;align-items:center;justify-content:center}
+.lb::backdrop{background:rgba(14,18,23,.94)}
+.lb figure{margin:0;max-width:min(1600px,92vw);text-align:center}
+.lb img{display:block;max-width:100%;max-height:calc(100dvh - 120px);width:auto;height:auto;margin:0 auto}
+.lb figcaption{margin-top:14px;font:700 17px/1.3 var(--h)}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:48px;height:48px;border-radius:50%;font-size:30px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lb button:hover,.lb button:focus-visible{background:var(--nieb);outline:none}
+.lb-x{top:16px;right:16px}
+.lb-n{top:50%;transform:translateY(-50%)}
+.lb-p{left:16px}.lb-d{right:16px}
+@media (max-width:860px){
+.wzory-siatka{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;scrollbar-width:none;padding-bottom:4px}
+.wzory-siatka::-webkit-scrollbar{display:none}
+.wzory-siatka li{flex:0 0 84%;scroll-snap-align:start}
+.lb-n{top:auto;bottom:16px;transform:none}
+.lb img{max-height:calc(100dvh - 160px)}
+}
+@media (prefers-reduced-motion:reduce){.wzor img{transition:none}}
 </style>
 <meta name="description" content="Ta polityka wyjaśnia, jakie dane przetwarzamy w związku z korzystaniem ze strony kofi.pl, w jakim celu i jakie prawa Państwu przysługują. Obowiązuje od lis...">
 <link rel="canonical" href="https://disaster26.github.io/kofi-strona/polityka-prywatnosci/">
@@ -471,7 +500,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
             <a href="https://disaster26.github.io/kofi-strona/#kontakt">Kontakt</a>
             <div class="menu-kontakt">
         <a href="tel:+48509773174"><svg aria-hidden="true"><use href="#tel"/></svg>+48 509 773 174</a>
-        <a href="mailto:&#107;%6ffi%40%6b%6f&#102;%69.p%6c"><svg aria-hidden="true"><use href="#mail"/></svg>&#107;o&#102;&#105;&#64;&#107;o&#102;&#105;&#46;p&#108;</a>      </div>
+        <a href="mailto:ko&#102;%69%40%6bo&#102;&#105;&#046;%70&#108;"><svg aria-hidden="true"><use href="#mail"/></svg>ko&#102;&#105;&#64;k&#111;&#102;&#105;.&#112;l</a>      </div>
     </nav>
     <div class="nag-akcje">
       <div class="jezyk" role="group" aria-label="Język"><a href="https://disaster26.github.io/kofi-strona/" class="jez-akt" aria-current="true">PL</a><a href="https://disaster26.github.io/kofi-strona/#de" lang="de" hreflang="de">DE</a></div>
@@ -497,7 +526,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p class="wp-block-paragraph">Administratorem danych jest "KISŁY KOFI" Spółka Komandytowa z siedzibą w Myśliborzu, ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz, wpisana do rejestru przedsiębiorców KRS pod numerem 0001092831, NIP 597-175-96-70, REGON 528044141. Kontakt w sprawach danych: e-mail <a href="mailto:&#107;%6f&#102;&#105;&#064;%6bof%69&#046;pl">&#107;o&#102;&#105;&#64;k&#111;&#102;i&#46;pl</a>, telefon <a href="tel:+48509773174">+48 509 773 174</a> albo listownie na adres siedziby.</p>
+<p class="wp-block-paragraph">Administratorem danych jest "KISŁY KOFI" Spółka Komandytowa z siedzibą w Myśliborzu, ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz, wpisana do rejestru przedsiębiorców KRS pod numerem 0001092831, NIP 597-175-96-70, REGON 528044141. Kontakt w sprawach danych: e-mail <a href="mailto:&#107;&#111;&#102;%69&#064;&#107;of%69.p&#108;">&#107;&#111;f&#105;&#64;&#107;&#111;fi&#46;pl</a>, telefon <a href="tel:+48509773174">+48 509 773 174</a> albo listownie na adres siedziby.</p>
 
 
 
@@ -580,7 +609,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
     </nav>
     <div class="stopka-kontakt">
       <a href="tel:+48509773174">+48 509 773 174</a>
-      <a href="tel:+48957470423">+48 95 747 04 23</a>      <a href="mailto:&#107;o&#102;%69&#064;ko%66&#105;%2ep&#108;">&#107;&#111;&#102;&#105;&#64;&#107;&#111;fi&#46;pl</a>      <a href="mailto:ord&#101;rs&#064;%6bofi&#046;%70%6c">order&#115;&#64;k&#111;fi.p&#108;</a>      <span>ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz</span>
+      <a href="tel:+48957470423">+48 95 747 04 23</a>      <a href="mailto:k&#111;&#102;&#105;&#064;%6bo%66i.p%6c">&#107;&#111;f&#105;&#64;&#107;&#111;&#102;&#105;&#46;&#112;&#108;</a>      <a href="mailto:ord%65&#114;s%40k&#111;f%69&#046;%70l">&#111;&#114;&#100;&#101;rs&#64;ko&#102;&#105;.&#112;&#108;</a>      <span>ul. Bohaterów Warszawy 52/5, 74-300 Myślibórz</span>
     </div>
   </div>
   <div class="wrap stopka-dol">
@@ -626,6 +655,6 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 var KOFI = {"ajax":"https://disaster26.github.io/kofi-strona/wp-admin/admin-ajax.php"};
 //# sourceURL=kofi-js-extra
 </script>
-<script data-wp-strategy="defer" defer id="kofi-js" src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/js/site.js?ver=1.1.0-1794582558"></script>
+<script data-wp-strategy="defer" defer id="kofi-js" src="https://disaster26.github.io/kofi-strona/wp-content/themes/kofi/assets/js/site.js?ver=1.1.0-1794829521"></script>
 </body>
 </html>
